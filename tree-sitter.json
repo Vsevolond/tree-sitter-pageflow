@@ -14,7 +14,8 @@
       "highlights": "queries/highlights.scm",
       "tags": "queries/tags.scm",
       "locals": "queries/locals.scm",
-      "indents": "queries/indents.scm"
+      "indents": "queries/indents.scm",
+      "folds": "queries/folds.scm"
     }
   ],
   "metadata": {

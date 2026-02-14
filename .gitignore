@@ -48,3 +48,6 @@ zig-out/
 *.tar.gz
 *.tgz
 *.zip
+
+.swiftpm/xcode/xcuserdata
+.swiftpm/xcode/package.xcworkspace/xcuserdata
