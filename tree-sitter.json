@@ -1,0 +1,43 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "pageflow",
+      "camelcase": "PageFlow",
+      "title": "PageFlow",
+      "scope": "source.pageflow",
+      "file-types": [
+        ".pageflow",
+        ".pf"
+      ],
+      "class-name": "TreeSitterPageflow",
+      "highlights": "queries/highlights.scm",
+      "tags": "queries/tags.scm",
+      "locals": "queries/locals.scm",
+      "indents": "queries/indents.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "PageFlow document markup language",
+    "authors": [
+      {
+        "name": "Vsevolod Donchenko",
+        "email": "vsevolond.dev@mail.ru"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Vsevolond/tree-sitter-pageflow"
+    }
+  },
+  "bindings": {
+    "c": false,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": false,
+    "swift": true,
+    "zig": false
+  }
+}

@@ -1,0 +1,2998 @@
+[
+  {
+    "type": "add_operation",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "alignment_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "layout_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alignment_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alignment_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "axis_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "axis_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "axis_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "background_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "color_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "background_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "background_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bool_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "caption_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "text_arg_fragment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_frame_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_frame_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_frame_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_frame_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_frame_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "code_language_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_language_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_language_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_language_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_language_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "code_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_frame_modifier",
+          "named": true
+        },
+        {
+          "type": "code_language_modifier",
+          "named": true
+        },
+        {
+          "type": "code_numbers_modifier",
+          "named": true
+        },
+        {
+          "type": "code_style_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_numbers_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bool_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_style_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_style_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_style_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_style_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "code_style_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "color_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "color_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "color_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "constant",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "container_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "spacing_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "divider_element",
+          "named": true
+        },
+        {
+          "type": "hstack_block",
+          "named": true
+        },
+        {
+          "type": "image_element",
+          "named": true
+        },
+        {
+          "type": "listing_element",
+          "named": true
+        },
+        {
+          "type": "math_block",
+          "named": true
+        },
+        {
+          "type": "spacer_element",
+          "named": true
+        },
+        {
+          "type": "text_block",
+          "named": true
+        },
+        {
+          "type": "vstack_block",
+          "named": true
+        },
+        {
+          "type": "zstack_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "divider_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "divider_modifier",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "divider_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_modifiers",
+          "named": true
+        },
+        {
+          "type": "foreground_modifiers",
+          "named": true
+        },
+        {
+          "type": "frame_modifiers",
+          "named": true
+        },
+        {
+          "type": "layout_modifiers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "edge_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "edge_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "edge_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "newpage_block",
+          "named": true
+        },
+        {
+          "type": "section_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enumerated_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bool_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "add_operation",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "factor",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "primary_factor",
+          "named": true
+        },
+        {
+          "type": "unary_factor",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "figure_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "caption_modifier",
+          "named": true
+        },
+        {
+          "type": "enumerated_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "font_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "font_size_modifier",
+          "named": true
+        },
+        {
+          "type": "font_style_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "font_size_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "font_size_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "font_size_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "font_size_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "font_size_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "font_style_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "font_style_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "font_style_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "font_style_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "font_style_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "footer_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "text_arg_fragment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "foreground_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "tint_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "frame_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "height_modifier",
+          "named": true
+        },
+        {
+          "type": "width_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "halignment_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "vertical_alignment_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "header_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "text_arg_fragment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "height_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "horizontal_alignment_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "horizontal_alignment_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "horizontal_alignment_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "hstack_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "hstack_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hstack_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_modifiers",
+          "named": true
+        },
+        {
+          "type": "background_modifiers",
+          "named": true
+        },
+        {
+          "type": "container_modifiers",
+          "named": true
+        },
+        {
+          "type": "figure_modifiers",
+          "named": true
+        },
+        {
+          "type": "frame_modifiers",
+          "named": true
+        },
+        {
+          "type": "halignment_modifier",
+          "named": true
+        },
+        {
+          "type": "inset_modifiers",
+          "named": true
+        },
+        {
+          "type": "layout_modifiers",
+          "named": true
+        },
+        {
+          "type": "subfigure_modifiers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "image_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "file_name",
+          "named": true
+        },
+        {
+          "type": "image_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "image_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_modifiers",
+          "named": true
+        },
+        {
+          "type": "figure_modifiers",
+          "named": true
+        },
+        {
+          "type": "frame_modifiers",
+          "named": true
+        },
+        {
+          "type": "layout_modifiers",
+          "named": true
+        },
+        {
+          "type": "subfigure_modifiers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inset_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "margin_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "layout_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "layout_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "offset_modifier",
+          "named": true
+        },
+        {
+          "type": "padding_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "line_pattern_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "line_pattern_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "line_pattern_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "line_spacing_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "listing_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "file_name",
+          "named": true
+        },
+        {
+          "type": "listing_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "listing_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "code_modifiers",
+          "named": true
+        },
+        {
+          "type": "figure_modifiers",
+          "named": true
+        },
+        {
+          "type": "font_modifiers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "margin_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "edge_type",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "math_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "math_element",
+          "named": true
+        },
+        {
+          "type": "math_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "math_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "math_text",
+          "named": true
+        },
+        {
+          "type": "newline",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "math_inline_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "math_inline_text",
+          "named": true
+        },
+        {
+          "type": "newline",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "math_inline_fragment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "math_inline_element",
+          "named": true
+        },
+        {
+          "type": "math_separator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "math_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_modifiers",
+          "named": true
+        },
+        {
+          "type": "background_modifiers",
+          "named": true
+        },
+        {
+          "type": "font_modifiers",
+          "named": true
+        },
+        {
+          "type": "foreground_modifiers",
+          "named": true
+        },
+        {
+          "type": "frame_modifiers",
+          "named": true
+        },
+        {
+          "type": "inset_modifiers",
+          "named": true
+        },
+        {
+          "type": "layout_modifiers",
+          "named": true
+        },
+        {
+          "type": "text_layout_modifiers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mul_operation",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "newpage_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "newpage_content",
+          "named": true
+        },
+        {
+          "type": "newpage_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "newpage_content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "section_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "newpage_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "inset_modifiers",
+          "named": true
+        },
+        {
+          "type": "page_modifiers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "number",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "measure_unit",
+          "named": true
+        },
+        {
+          "type": "number_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "number_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "decimal",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "offset_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "axis_type",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "padding_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "edge_type",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "page_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "footer_modifier",
+          "named": true
+        },
+        {
+          "type": "header_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "primary_factor",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "section_content",
+          "named": true
+        },
+        {
+          "type": "text_arg_fragment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section_content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "section_newpage_block",
+          "named": true
+        },
+        {
+          "type": "subsection_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section_newpage_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "newpage_modifier",
+          "named": true
+        },
+        {
+          "type": "section_newpage_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section_newpage_content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "subsection_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "element",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "spacer_element",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "spacing_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "strikethrough_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "color_type",
+          "named": true
+        },
+        {
+          "type": "line_pattern_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subfigure_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bool_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subfigure_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "subfigure_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subsection_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "section_content",
+          "named": true
+        },
+        {
+          "type": "text_arg_fragment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "term",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "factor",
+          "named": true
+        },
+        {
+          "type": "mul_operation",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_alignment_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "horizontal_alignment_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_arg_fragment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "math_inline_fragment",
+          "named": true
+        },
+        {
+          "type": "newline",
+          "named": true
+        },
+        {
+          "type": "raw_arg_text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "text_fragment",
+          "named": true
+        },
+        {
+          "type": "text_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_editing_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "strikethrough_modifier",
+          "named": true
+        },
+        {
+          "type": "underline_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_fragment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "math_inline_fragment",
+          "named": true
+        },
+        {
+          "type": "newline",
+          "named": true
+        },
+        {
+          "type": "raw_text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_layout_modifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "line_spacing_modifier",
+          "named": true
+        },
+        {
+          "type": "text_alignment_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_modifiers",
+          "named": true
+        },
+        {
+          "type": "background_modifiers",
+          "named": true
+        },
+        {
+          "type": "font_modifiers",
+          "named": true
+        },
+        {
+          "type": "foreground_modifiers",
+          "named": true
+        },
+        {
+          "type": "frame_modifiers",
+          "named": true
+        },
+        {
+          "type": "layout_modifiers",
+          "named": true
+        },
+        {
+          "type": "text_editing_modifiers",
+          "named": true
+        },
+        {
+          "type": "text_layout_modifiers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tint_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "color_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unary_factor",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "add_operation",
+          "named": true
+        },
+        {
+          "type": "primary_factor",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "underline_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "color_type",
+          "named": true
+        },
+        {
+          "type": "line_pattern_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "valignment_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "horizontal_alignment_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vertical_alignment_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "vertical_alignment_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vertical_alignment_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "vstack_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "vstack_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vstack_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_modifiers",
+          "named": true
+        },
+        {
+          "type": "background_modifiers",
+          "named": true
+        },
+        {
+          "type": "container_modifiers",
+          "named": true
+        },
+        {
+          "type": "figure_modifiers",
+          "named": true
+        },
+        {
+          "type": "frame_modifiers",
+          "named": true
+        },
+        {
+          "type": "inset_modifiers",
+          "named": true
+        },
+        {
+          "type": "layout_modifiers",
+          "named": true
+        },
+        {
+          "type": "subfigure_modifiers",
+          "named": true
+        },
+        {
+          "type": "valignment_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "width_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "zalignment_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "zstack_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "zstack_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "zstack_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "alignment_modifiers",
+          "named": true
+        },
+        {
+          "type": "background_modifiers",
+          "named": true
+        },
+        {
+          "type": "container_modifiers",
+          "named": true
+        },
+        {
+          "type": "figure_modifiers",
+          "named": true
+        },
+        {
+          "type": "frame_modifiers",
+          "named": true
+        },
+        {
+          "type": "inset_modifiers",
+          "named": true
+        },
+        {
+          "type": "layout_modifiers",
+          "named": true
+        },
+        {
+          "type": "subfigure_modifiers",
+          "named": true
+        },
+        {
+          "type": "zalignment_modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "@height",
+    "named": false
+  },
+  {
+    "type": "@width",
+    "named": false
+  },
+  {
+    "type": "Alignment",
+    "named": false
+  },
+  {
+    "type": "Axis",
+    "named": false
+  },
+  {
+    "type": "CodeFrame",
+    "named": false
+  },
+  {
+    "type": "CodeLanguage",
+    "named": false
+  },
+  {
+    "type": "CodeStyle",
+    "named": false
+  },
+  {
+    "type": "Color",
+    "named": false
+  },
+  {
+    "type": "Divider",
+    "named": false
+  },
+  {
+    "type": "Edge",
+    "named": false
+  },
+  {
+    "type": "FontSize",
+    "named": false
+  },
+  {
+    "type": "FontStyle",
+    "named": false
+  },
+  {
+    "type": "HStack",
+    "named": false
+  },
+  {
+    "type": "HorizontalAlignment",
+    "named": false
+  },
+  {
+    "type": "Image",
+    "named": false
+  },
+  {
+    "type": "LinePattern",
+    "named": false
+  },
+  {
+    "type": "Listing",
+    "named": false
+  },
+  {
+    "type": "Math",
+    "named": false
+  },
+  {
+    "type": "NewPage",
+    "named": false
+  },
+  {
+    "type": "Section",
+    "named": false
+  },
+  {
+    "type": "Spacer",
+    "named": false
+  },
+  {
+    "type": "SubSection",
+    "named": false
+  },
+  {
+    "type": "Text",
+    "named": false
+  },
+  {
+    "type": "VStack",
+    "named": false
+  },
+  {
+    "type": "VerticalAlignment",
+    "named": false
+  },
+  {
+    "type": "ZStack",
+    "named": false
+  },
+  {
+    "type": "abap",
+    "named": false
+  },
+  {
+    "type": "ada",
+    "named": false
+  },
+  {
+    "type": "ahk",
+    "named": false
+  },
+  {
+    "type": "alignment",
+    "named": false
+  },
+  {
+    "type": "all",
+    "named": false
+  },
+  {
+    "type": "antlr",
+    "named": false
+  },
+  {
+    "type": "apacheconf",
+    "named": false
+  },
+  {
+    "type": "applescript",
+    "named": false
+  },
+  {
+    "type": "as",
+    "named": false
+  },
+  {
+    "type": "aspectj",
+    "named": false
+  },
+  {
+    "type": "asy",
+    "named": false
+  },
+  {
+    "type": "autoit",
+    "named": false
+  },
+  {
+    "type": "autumn",
+    "named": false
+  },
+  {
+    "type": "awk",
+    "named": false
+  },
+  {
+    "type": "background",
+    "named": false
+  },
+  {
+    "type": "basemake",
+    "named": false
+  },
+  {
+    "type": "bash",
+    "named": false
+  },
+  {
+    "type": "bat",
+    "named": false
+  },
+  {
+    "type": "bbcode",
+    "named": false
+  },
+  {
+    "type": "befunge",
+    "named": false
+  },
+  {
+    "type": "black",
+    "named": false
+  },
+  {
+    "type": "blue",
+    "named": false
+  },
+  {
+    "type": "bmax",
+    "named": false
+  },
+  {
+    "type": "bold",
+    "named": false
+  },
+  {
+    "type": "boo",
+    "named": false
+  },
+  {
+    "type": "borland",
+    "named": false
+  },
+  {
+    "type": "bottom",
+    "named": false
+  },
+  {
+    "type": "bottomLeading",
+    "named": false
+  },
+  {
+    "type": "bottomTrailing",
+    "named": false
+  },
+  {
+    "type": "bottomline",
+    "named": false
+  },
+  {
+    "type": "brainfuck",
+    "named": false
+  },
+  {
+    "type": "bro",
+    "named": false
+  },
+  {
+    "type": "brown",
+    "named": false
+  },
+  {
+    "type": "bugs",
+    "named": false
+  },
+  {
+    "type": "bw",
+    "named": false
+  },
+  {
+    "type": "c",
+    "named": false
+  },
+  {
+    "type": "caption",
+    "named": false
+  },
+  {
+    "type": "center",
+    "named": false
+  },
+  {
+    "type": "ceylon",
+    "named": false
+  },
+  {
+    "type": "cfm",
+    "named": false
+  },
+  {
+    "type": "cfs",
+    "named": false
+  },
+  {
+    "type": "cheetah",
+    "named": false
+  },
+  {
+    "type": "cl",
+    "named": false
+  },
+  {
+    "type": "clj",
+    "named": false
+  },
+  {
+    "type": "cmake",
+    "named": false
+  },
+  {
+    "type": "cobol",
+    "named": false
+  },
+  {
+    "type": "colorful",
+    "named": false
+  },
+  {
+    "type": "console",
+    "named": false
+  },
+  {
+    "type": "control",
+    "named": false
+  },
+  {
+    "type": "coq",
+    "named": false
+  },
+  {
+    "type": "cpp",
+    "named": false
+  },
+  {
+    "type": "croc",
+    "named": false
+  },
+  {
+    "type": "csharp",
+    "named": false
+  },
+  {
+    "type": "css",
+    "named": false
+  },
+  {
+    "type": "cucumber",
+    "named": false
+  },
+  {
+    "type": "cuda",
+    "named": false
+  },
+  {
+    "type": "cyan",
+    "named": false
+  },
+  {
+    "type": "cyx",
+    "named": false
+  },
+  {
+    "type": "d",
+    "named": false
+  },
+  {
+    "type": "darkGray",
+    "named": false
+  },
+  {
+    "type": "dash",
+    "named": false
+  },
+  {
+    "type": "dashDot",
+    "named": false
+  },
+  {
+    "type": "dashDotDot",
+    "named": false
+  },
+  {
+    "type": "decimal",
+    "named": true
+  },
+  {
+    "type": "dg",
+    "named": false
+  },
+  {
+    "type": "diff",
+    "named": false
+  },
+  {
+    "type": "django",
+    "named": false
+  },
+  {
+    "type": "dot",
+    "named": false
+  },
+  {
+    "type": "dpatch",
+    "named": false
+  },
+  {
+    "type": "duel",
+    "named": false
+  },
+  {
+    "type": "dylan",
+    "named": false
+  },
+  {
+    "type": "ec",
+    "named": false
+  },
+  {
+    "type": "emacs",
+    "named": false
+  },
+  {
+    "type": "enumerated",
+    "named": false
+  },
+  {
+    "type": "erb",
+    "named": false
+  },
+  {
+    "type": "evoque",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "fan",
+    "named": false
+  },
+  {
+    "type": "fancy",
+    "named": false
+  },
+  {
+    "type": "file_name",
+    "named": true
+  },
+  {
+    "type": "fontSize",
+    "named": false
+  },
+  {
+    "type": "fontStyle",
+    "named": false
+  },
+  {
+    "type": "footer",
+    "named": false
+  },
+  {
+    "type": "footnote",
+    "named": false
+  },
+  {
+    "type": "fortran",
+    "named": false
+  },
+  {
+    "type": "frame",
+    "named": false
+  },
+  {
+    "type": "friendly",
+    "named": false
+  },
+  {
+    "type": "fruity",
+    "named": false
+  },
+  {
+    "type": "gas",
+    "named": false
+  },
+  {
+    "type": "genshi",
+    "named": false
+  },
+  {
+    "type": "glsl",
+    "named": false
+  },
+  {
+    "type": "gnuplot",
+    "named": false
+  },
+  {
+    "type": "go",
+    "named": false
+  },
+  {
+    "type": "gosu",
+    "named": false
+  },
+  {
+    "type": "gray",
+    "named": false
+  },
+  {
+    "type": "green",
+    "named": false
+  },
+  {
+    "type": "groovy",
+    "named": false
+  },
+  {
+    "type": "gst",
+    "named": false
+  },
+  {
+    "type": "haml",
+    "named": false
+  },
+  {
+    "type": "haskell",
+    "named": false
+  },
+  {
+    "type": "header",
+    "named": false
+  },
+  {
+    "type": "height",
+    "named": false
+  },
+  {
+    "type": "horizontal",
+    "named": false
+  },
+  {
+    "type": "html",
+    "named": false
+  },
+  {
+    "type": "http",
+    "named": false
+  },
+  {
+    "type": "huge",
+    "named": false
+  },
+  {
+    "type": "hugest",
+    "named": false
+  },
+  {
+    "type": "hx",
+    "named": false
+  },
+  {
+    "type": "hxml",
+    "named": false
+  },
+  {
+    "type": "idl",
+    "named": false
+  },
+  {
+    "type": "ini",
+    "named": false
+  },
+  {
+    "type": "integer",
+    "named": true
+  },
+  {
+    "type": "irc",
+    "named": false
+  },
+  {
+    "type": "italic",
+    "named": false
+  },
+  {
+    "type": "jade",
+    "named": false
+  },
+  {
+    "type": "java",
+    "named": false
+  },
+  {
+    "type": "js",
+    "named": false
+  },
+  {
+    "type": "json",
+    "named": false
+  },
+  {
+    "type": "jsp",
+    "named": false
+  },
+  {
+    "type": "kconfig",
+    "named": false
+  },
+  {
+    "type": "koka",
+    "named": false
+  },
+  {
+    "type": "language",
+    "named": false
+  },
+  {
+    "type": "large",
+    "named": false
+  },
+  {
+    "type": "larger",
+    "named": false
+  },
+  {
+    "type": "largest",
+    "named": false
+  },
+  {
+    "type": "lasso",
+    "named": false
+  },
+  {
+    "type": "layout",
+    "named": false
+  },
+  {
+    "type": "leading",
+    "named": false
+  },
+  {
+    "type": "lefline",
+    "named": false
+  },
+  {
+    "type": "lightGray",
+    "named": false
+  },
+  {
+    "type": "lime",
+    "named": false
+  },
+  {
+    "type": "lineSpacing",
+    "named": false
+  },
+  {
+    "type": "lines",
+    "named": false
+  },
+  {
+    "type": "livescrit",
+    "named": false
+  },
+  {
+    "type": "llvm",
+    "named": false
+  },
+  {
+    "type": "logos",
+    "named": false
+  },
+  {
+    "type": "lua",
+    "named": false
+  },
+  {
+    "type": "magenta",
+    "named": false
+  },
+  {
+    "type": "mako",
+    "named": false
+  },
+  {
+    "type": "manni",
+    "named": false
+  },
+  {
+    "type": "margin",
+    "named": false
+  },
+  {
+    "type": "mason",
+    "named": false
+  },
+  {
+    "type": "math_inline_text",
+    "named": true
+  },
+  {
+    "type": "math_separator",
+    "named": true
+  },
+  {
+    "type": "math_text",
+    "named": true
+  },
+  {
+    "type": "matlab",
+    "named": false
+  },
+  {
+    "type": "measure_unit",
+    "named": true
+  },
+  {
+    "type": "medium",
+    "named": false
+  },
+  {
+    "type": "minid",
+    "named": false
+  },
+  {
+    "type": "monkey",
+    "named": false
+  },
+  {
+    "type": "monokai",
+    "named": false
+  },
+  {
+    "type": "monospaced",
+    "named": false
+  },
+  {
+    "type": "moon",
+    "named": false
+  },
+  {
+    "type": "murphy",
+    "named": false
+  },
+  {
+    "type": "mxml",
+    "named": false
+  },
+  {
+    "type": "myghty",
+    "named": false
+  },
+  {
+    "type": "mysql",
+    "named": false
+  },
+  {
+    "type": "nasm",
+    "named": false
+  },
+  {
+    "type": "native",
+    "named": false
+  },
+  {
+    "type": "newline",
+    "named": true
+  },
+  {
+    "type": "newlisp",
+    "named": false
+  },
+  {
+    "type": "newspeak",
+    "named": false
+  },
+  {
+    "type": "normal",
+    "named": false
+  },
+  {
+    "type": "numbers",
+    "named": false
+  },
+  {
+    "type": "numpy",
+    "named": false
+  },
+  {
+    "type": "ocaml",
+    "named": false
+  },
+  {
+    "type": "octave",
+    "named": false
+  },
+  {
+    "type": "offset",
+    "named": false
+  },
+  {
+    "type": "olive",
+    "named": false
+  },
+  {
+    "type": "ooc",
+    "named": false
+  },
+  {
+    "type": "orange",
+    "named": false
+  },
+  {
+    "type": "padding",
+    "named": false
+  },
+  {
+    "type": "pastie",
+    "named": false
+  },
+  {
+    "type": "perl",
+    "named": false
+  },
+  {
+    "type": "perldoc",
+    "named": false
+  },
+  {
+    "type": "php",
+    "named": false
+  },
+  {
+    "type": "pink",
+    "named": false
+  },
+  {
+    "type": "plpgsql",
+    "named": false
+  },
+  {
+    "type": "postgresql",
+    "named": false
+  },
+  {
+    "type": "postscript",
+    "named": false
+  },
+  {
+    "type": "pot",
+    "named": false
+  },
+  {
+    "type": "prolog",
+    "named": false
+  },
+  {
+    "type": "psql",
+    "named": false
+  },
+  {
+    "type": "puppet",
+    "named": false
+  },
+  {
+    "type": "purple",
+    "named": false
+  },
+  {
+    "type": "python",
+    "named": false
+  },
+  {
+    "type": "qml",
+    "named": false
+  },
+  {
+    "type": "ragel",
+    "named": false
+  },
+  {
+    "type": "raw",
+    "named": false
+  },
+  {
+    "type": "raw_arg_text",
+    "named": true
+  },
+  {
+    "type": "raw_text",
+    "named": true
+  },
+  {
+    "type": "red",
+    "named": false
+  },
+  {
+    "type": "rhtml",
+    "named": false
+  },
+  {
+    "type": "rrt",
+    "named": false
+  },
+  {
+    "type": "ruby",
+    "named": false
+  },
+  {
+    "type": "sass",
+    "named": false
+  },
+  {
+    "type": "scheme",
+    "named": false
+  },
+  {
+    "type": "script",
+    "named": false
+  },
+  {
+    "type": "single",
+    "named": false
+  },
+  {
+    "type": "small",
+    "named": false
+  },
+  {
+    "type": "smallCaps",
+    "named": false
+  },
+  {
+    "type": "smalltalk",
+    "named": false
+  },
+  {
+    "type": "solid",
+    "named": false
+  },
+  {
+    "type": "spacing",
+    "named": false
+  },
+  {
+    "type": "sql",
+    "named": false
+  },
+  {
+    "type": "ssp",
+    "named": false
+  },
+  {
+    "type": "strikethrough",
+    "named": false
+  },
+  {
+    "type": "style",
+    "named": false
+  },
+  {
+    "type": "subfigure",
+    "named": false
+  },
+  {
+    "type": "tango",
+    "named": false
+  },
+  {
+    "type": "tcl",
+    "named": false
+  },
+  {
+    "type": "tea",
+    "named": false
+  },
+  {
+    "type": "teal",
+    "named": false
+  },
+  {
+    "type": "tex",
+    "named": false
+  },
+  {
+    "type": "text",
+    "named": false
+  },
+  {
+    "type": "textAlignment",
+    "named": false
+  },
+  {
+    "type": "tint",
+    "named": false
+  },
+  {
+    "type": "tiny",
+    "named": false
+  },
+  {
+    "type": "top",
+    "named": false
+  },
+  {
+    "type": "topLeading",
+    "named": false
+  },
+  {
+    "type": "topTrailing",
+    "named": false
+  },
+  {
+    "type": "topline",
+    "named": false
+  },
+  {
+    "type": "trac",
+    "named": false
+  },
+  {
+    "type": "trailing",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "underline",
+    "named": false
+  },
+  {
+    "type": "vala",
+    "named": false
+  },
+  {
+    "type": "vertical",
+    "named": false
+  },
+  {
+    "type": "vgl",
+    "named": false
+  },
+  {
+    "type": "vim",
+    "named": false
+  },
+  {
+    "type": "violet",
+    "named": false
+  },
+  {
+    "type": "vs",
+    "named": false
+  },
+  {
+    "type": "white",
+    "named": false
+  },
+  {
+    "type": "width",
+    "named": false
+  },
+  {
+    "type": "xml",
+    "named": false
+  },
+  {
+    "type": "xquery",
+    "named": false
+  },
+  {
+    "type": "yaml",
+    "named": false
+  },
+  {
+    "type": "yellow",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]
