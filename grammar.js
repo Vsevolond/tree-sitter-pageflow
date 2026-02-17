@@ -21,7 +21,9 @@ module.exports = grammar({
             $.image_element,
             $.spacer_element,
             $.divider_element,
-            $.listing_element
+            $.listing_element,
+            $.text_content,
+            $.math_content
         ),
         
         newpage_block: $ => seq(
@@ -46,7 +48,7 @@ module.exports = grammar({
         section_block: $ => seq(
             "Section",
             "(",
-            repeat($.text_arg_fragment),
+            $.text_content,
             ")",
             "{",
             repeat($.section_content),
@@ -72,12 +74,13 @@ module.exports = grammar({
         subsection_block: $ => seq(
             "SubSection",
             "(",
-            repeat($.text_arg_fragment),
+            $.text_content,
             ")",
             "{",
             repeat($.section_content),
             "}"
         ),
+        subsection_title: $ => $.text_content,
         
         vstack_block: $ => seq(
             "VStack",
@@ -148,7 +151,7 @@ module.exports = grammar({
         text_block: $ => seq(
             "Text",
             "{",
-            repeat($.text_fragment),
+            $.text_content,
             "}",
             repeat($.text_modifier)
         ),
@@ -161,6 +164,27 @@ module.exports = grammar({
                 $.frame_modifiers,
                 $.layout_modifiers,
                 $.alignment_modifiers,
+                $.foreground_modifiers,
+                $.background_modifiers
+            )
+        ),
+      
+        math_block: $ => seq(
+            "Math",
+            "{",
+            $.math_content,
+            "}",
+            repeat($.math_modifier)
+        ),
+        math_modifier: $ => seq(
+            ".",
+            choice(
+                $.text_layout_modifiers,
+                $.font_modifiers,
+                $.frame_modifiers,
+                $.layout_modifiers,
+                $.alignment_modifiers,
+                $.inset_modifiers,
                 $.foreground_modifiers,
                 $.background_modifiers
             )
@@ -208,27 +232,6 @@ module.exports = grammar({
             )
         ),
         
-        math_block: $ => seq(
-            "Math",
-            "{",
-            repeat($.math_element),
-            "}",
-            repeat($.math_modifier)
-        ),
-        math_modifier: $ => seq(
-            ".",
-            choice(
-                $.text_layout_modifiers,
-                $.font_modifiers,
-                $.frame_modifiers,
-                $.layout_modifiers,
-                $.alignment_modifiers,
-                $.inset_modifiers,
-                $.foreground_modifiers,
-                $.background_modifiers
-            )
-        ),
-        
         listing_element: $ => seq(
             "Listing",
             "(",
@@ -244,28 +247,26 @@ module.exports = grammar({
                 $.figure_modifiers
             )
         ),
+      
+        text_content: $ => seq(
+            $.text_delimiter,
+            repeat($.text_fragment),
+            $.text_delimiter
+        ),
+        
+        math_content: $ => seq(
+            $.math_delimiter,
+            repeat($.math_fragment),
+            $.math_delimiter
+        ),
         
         text_fragment: $ => choice(
             $.raw_text,
-            $.math_inline_fragment,
-            $.newline
-        ),
-        text_arg_fragment: $ => choice(
-            $.raw_arg_text,
-            $.math_inline_fragment,
+            $.math_content,
             $.newline
         ),
         
-        math_inline_fragment: $ => seq(
-            $.math_separator,
-            repeat($.math_inline_element),
-            $.math_separator
-        ),
-        math_inline_element: $ => choice(
-            $.math_inline_text,
-            $.newline
-        ),
-        math_element: $ => choice(
+        math_fragment: $ => choice(
             $.math_text,
             $.newline
         ),
@@ -333,14 +334,14 @@ module.exports = grammar({
         header_modifier: $ => seq(
             "header",
             "(",
-            repeat($.text_arg_fragment),
+            $.text_content,
             ")"
         ),
         
         footer_modifier: $ => seq(
             "footer",
             "(",
-            repeat($.text_arg_fragment),
+            $.text_content,
             ")"
         ),
         
@@ -399,7 +400,7 @@ module.exports = grammar({
         caption_modifier: $ => seq(
             "caption",
             "(",
-            repeat($.text_arg_fragment),
+            $.text_content,
             ")"
         ),
         
@@ -552,29 +553,13 @@ module.exports = grammar({
         raw_text: $ => token(
             repeat1(
                 choice(
-                    /[^\\{}$]/,
-                    seq("\\", /[^\\]/)
-                )
-            )
-        ),
-        raw_arg_text: $ => token(
-            repeat1(
-                choice(
-                    /[^\\()$]/,
+                    /[^\\"]/,
                     seq("\\", /[^\\]/)
                 )
             )
         ),
         
         math_text: $ => token(
-            repeat1(
-                choice(
-                    /[^\\{}]/,
-                    seq("\\", /[^\\]/)
-                )
-            )
-        ),
-        math_inline_text: $ => token(
             repeat1(
                 choice(
                     /[^\\$]/,
@@ -584,7 +569,8 @@ module.exports = grammar({
         ),
         
         newline: $ => "\\\\",
-        math_separator: $ => "$",
+        text_delimiter: $ => "\"",
+        math_delimiter: $ => "$",
         
         file_name: $ => /[a-zA-Z0-9_\-]+/,
         

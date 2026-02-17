@@ -64,6 +64,14 @@
         {
           "type": "SYMBOL",
           "name": "listing_element"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text_content"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "math_content"
         }
       ]
     },
@@ -145,11 +153,8 @@
           "value": "("
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "text_arg_fragment"
-          }
+          "type": "SYMBOL",
+          "name": "text_content"
         },
         {
           "type": "STRING",
@@ -245,11 +250,8 @@
           "value": "("
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "text_arg_fragment"
-          }
+          "type": "SYMBOL",
+          "name": "text_content"
         },
         {
           "type": "STRING",
@@ -271,6 +273,10 @@
           "value": "}"
         }
       ]
+    },
+    "subsection_title": {
+      "type": "SYMBOL",
+      "name": "text_content"
     },
     "vstack_block": {
       "type": "SEQ",
@@ -527,11 +533,8 @@
           "value": "{"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "text_fragment"
-          }
+          "type": "SYMBOL",
+          "name": "text_content"
         },
         {
           "type": "STRING",
@@ -579,6 +582,80 @@
             {
               "type": "SYMBOL",
               "name": "alignment_modifiers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "foreground_modifiers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "background_modifiers"
+            }
+          ]
+        }
+      ]
+    },
+    "math_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "Math"
+        },
+        {
+          "type": "STRING",
+          "value": "{"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "math_content"
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "math_modifier"
+          }
+        }
+      ]
+    },
+    "math_modifier": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "."
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "text_layout_modifiers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "font_modifiers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "frame_modifiers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "layout_modifiers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "alignment_modifiers"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "inset_modifiers"
             },
             {
               "type": "SYMBOL",
@@ -733,83 +810,6 @@
         }
       ]
     },
-    "math_block": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "Math"
-        },
-        {
-          "type": "STRING",
-          "value": "{"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "math_element"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "}"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "math_modifier"
-          }
-        }
-      ]
-    },
-    "math_modifier": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "."
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "text_layout_modifiers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "font_modifiers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "frame_modifiers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "layout_modifiers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "alignment_modifiers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "inset_modifiers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "foreground_modifiers"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "background_modifiers"
-            }
-          ]
-        }
-      ]
-    },
     "listing_element": {
       "type": "SEQ",
       "members": [
@@ -864,6 +864,46 @@
         }
       ]
     },
+    "text_content": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "text_delimiter"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "text_fragment"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text_delimiter"
+        }
+      ]
+    },
+    "math_content": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "math_delimiter"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "math_fragment"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "math_delimiter"
+        }
+      ]
+    },
     "text_fragment": {
       "type": "CHOICE",
       "members": [
@@ -873,7 +913,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "math_inline_fragment"
+          "name": "math_content"
         },
         {
           "type": "SYMBOL",
@@ -881,57 +921,7 @@
         }
       ]
     },
-    "text_arg_fragment": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "raw_arg_text"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "math_inline_fragment"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "newline"
-        }
-      ]
-    },
-    "math_inline_fragment": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "math_separator"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "math_inline_element"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "math_separator"
-        }
-      ]
-    },
-    "math_inline_element": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "math_inline_text"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "newline"
-        }
-      ]
-    },
-    "math_element": {
+    "math_fragment": {
       "type": "CHOICE",
       "members": [
         {
@@ -1155,11 +1145,8 @@
           "value": "("
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "text_arg_fragment"
-          }
+          "type": "SYMBOL",
+          "name": "text_content"
         },
         {
           "type": "STRING",
@@ -1179,11 +1166,8 @@
           "value": "("
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "text_arg_fragment"
-          }
+          "type": "SYMBOL",
+          "name": "text_content"
         },
         {
           "type": "STRING",
@@ -1374,11 +1358,8 @@
           "value": "("
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "text_arg_fragment"
-          }
+          "type": "SYMBOL",
+          "name": "text_content"
         },
         {
           "type": "STRING",
@@ -1922,35 +1903,7 @@
           "members": [
             {
               "type": "PATTERN",
-              "value": "[^\\\\{}$]"
-            },
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "\\"
-                },
-                {
-                  "type": "PATTERN",
-                  "value": "[^\\\\]"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    },
-    "raw_arg_text": {
-      "type": "TOKEN",
-      "content": {
-        "type": "REPEAT1",
-        "content": {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[^\\\\()$]"
+              "value": "[^\\\\\"]"
             },
             {
               "type": "SEQ",
@@ -1970,34 +1923,6 @@
       }
     },
     "math_text": {
-      "type": "TOKEN",
-      "content": {
-        "type": "REPEAT1",
-        "content": {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[^\\\\{}]"
-            },
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "\\"
-                },
-                {
-                  "type": "PATTERN",
-                  "value": "[^\\\\]"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    },
-    "math_inline_text": {
       "type": "TOKEN",
       "content": {
         "type": "REPEAT1",
@@ -2029,7 +1954,11 @@
       "type": "STRING",
       "value": "\\\\"
     },
-    "math_separator": {
+    "text_delimiter": {
+      "type": "STRING",
+      "value": "\""
+    },
+    "math_delimiter": {
       "type": "STRING",
       "value": "$"
     },
