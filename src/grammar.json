@@ -1903,7 +1903,7 @@
           "members": [
             {
               "type": "PATTERN",
-              "value": "[^\\\\\"]"
+              "value": "[^\\\\\"$]"
             },
             {
               "type": "SEQ",

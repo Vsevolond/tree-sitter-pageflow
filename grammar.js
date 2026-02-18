@@ -553,7 +553,7 @@ module.exports = grammar({
         raw_text: $ => token(
             repeat1(
                 choice(
-                    /[^\\"]/,
+                    /[^\\"$]/,
                     seq("\\", /[^\\]/)
                 )
             )
