@@ -274,10 +274,6 @@
         }
       ]
     },
-    "subsection_title": {
-      "type": "SYMBOL",
-      "name": "text_content"
-    },
     "vstack_block": {
       "type": "SEQ",
       "members": [

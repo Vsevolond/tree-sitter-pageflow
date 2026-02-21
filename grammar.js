@@ -80,7 +80,6 @@ module.exports = grammar({
             repeat($.section_content),
             "}"
         ),
-        subsection_title: $ => $.text_content,
         
         vstack_block: $ => seq(
             "VStack",
