@@ -37,7 +37,17 @@
   {
     "type": "alignment_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "axis_type",
@@ -57,7 +67,17 @@
   {
     "type": "axis_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "background_modifier",
@@ -92,7 +112,17 @@
   {
     "type": "bool_type",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_constant",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "caption_modifier",
@@ -142,7 +172,17 @@
   {
     "type": "code_frame_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "code_language_modifier",
@@ -177,7 +217,17 @@
   {
     "type": "code_language_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "code_modifiers",
@@ -254,7 +304,17 @@
   {
     "type": "code_style_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "color_type",
@@ -274,12 +334,32 @@
   {
     "type": "color_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "constant",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_constant",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "container_modifiers",
@@ -415,7 +495,17 @@
   {
     "type": "edge_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "element",
@@ -568,7 +658,17 @@
   {
     "type": "font_size_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "font_style_modifier",
@@ -603,7 +703,17 @@
   {
     "type": "font_style_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "footer_modifier",
@@ -717,7 +827,17 @@
   {
     "type": "horizontal_alignment_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "hstack_block",
@@ -902,7 +1022,17 @@
   {
     "type": "line_pattern_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "line_spacing_modifier",
@@ -963,6 +1093,40 @@
   },
   {
     "type": "margin_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "margin_modifier_default",
+          "named": true
+        },
+        {
+          "type": "margin_modifier_full",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "margin_modifier_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "margin_modifier_full",
     "named": true,
     "fields": {},
     "children": {
@@ -1176,12 +1340,50 @@
         {
           "type": "integer",
           "named": true
+        },
+        {
+          "type": "invalid_number",
+          "named": true
         }
       ]
     }
   },
   {
     "type": "offset_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "offset_modifier_default",
+          "named": true
+        },
+        {
+          "type": "offset_modifier_full",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "offset_modifier_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "offset_modifier_full",
     "named": true,
     "fields": {},
     "children": {
@@ -1201,6 +1403,40 @@
   },
   {
     "type": "padding_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "padding_modifier_default",
+          "named": true
+        },
+        {
+          "type": "padding_modifier_full",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "padding_modifier_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "padding_modifier_full",
     "named": true,
     "fields": {},
     "children": {
@@ -1388,6 +1624,40 @@
   },
   {
     "type": "strikethrough_modifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "strikethrough_modifier_default",
+          "named": true
+        },
+        {
+          "type": "strikethrough_modifier_full",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "strikethrough_modifier_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "line_pattern_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "strikethrough_modifier_full",
     "named": true,
     "fields": {},
     "children": {
@@ -1677,6 +1947,40 @@
       "required": true,
       "types": [
         {
+          "type": "underline_modifier_default",
+          "named": true
+        },
+        {
+          "type": "underline_modifier_full",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "underline_modifier_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "line_pattern_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "underline_modifier_full",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "color_type",
           "named": true
         },
@@ -1720,7 +2024,17 @@
   {
     "type": "vertical_alignment_value",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "invalid_value",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "vstack_block",
@@ -1925,43 +2239,7 @@
     "named": false
   },
   {
-    "type": "Alignment",
-    "named": false
-  },
-  {
-    "type": "Axis",
-    "named": false
-  },
-  {
-    "type": "CodeFrame",
-    "named": false
-  },
-  {
-    "type": "CodeLanguage",
-    "named": false
-  },
-  {
-    "type": "CodeStyle",
-    "named": false
-  },
-  {
-    "type": "Color",
-    "named": false
-  },
-  {
     "type": "Divider",
-    "named": false
-  },
-  {
-    "type": "Edge",
-    "named": false
-  },
-  {
-    "type": "FontSize",
-    "named": false
-  },
-  {
-    "type": "FontStyle",
     "named": false
   },
   {
@@ -1969,15 +2247,7 @@
     "named": false
   },
   {
-    "type": "HorizontalAlignment",
-    "named": false
-  },
-  {
     "type": "Image",
-    "named": false
-  },
-  {
-    "type": "LinePattern",
     "named": false
   },
   {
@@ -2010,10 +2280,6 @@
   },
   {
     "type": "VStack",
-    "named": false
-  },
-  {
-    "type": "VerticalAlignment",
     "named": false
   },
   {
@@ -2466,6 +2732,18 @@
   },
   {
     "type": "integer",
+    "named": true
+  },
+  {
+    "type": "invalid_constant",
+    "named": true
+  },
+  {
+    "type": "invalid_number",
+    "named": true
+  },
+  {
+    "type": "invalid_value",
     "named": true
   },
   {

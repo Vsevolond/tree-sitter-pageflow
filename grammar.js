@@ -312,188 +312,240 @@ module.exports = grammar({
         ),
         
         valignment_modifier: $ => seq(
-            "alignment",
+            token.immediate("alignment"),
             "(",
             $.horizontal_alignment_type,
             ")"
         ),
         halignment_modifier: $ => seq(
-            "alignment",
+            token.immediate("alignment"),
             "(",
             $.vertical_alignment_type,
             ")"
         ),
         zalignment_modifier: $ => seq(
-            "alignment",
+            token.immediate("alignment"),
             "(",
             $.alignment_type,
             ")"
         ),
         
         header_modifier: $ => seq(
-            "header",
+            token.immediate("header"),
             "(",
             $.text_content,
             ")"
         ),
         
         footer_modifier: $ => seq(
-            "footer",
+            token.immediate("footer"),
             "(",
             $.text_content,
             ")"
         ),
         
         width_modifier: $ => seq(
-            "width",
+            token.immediate("width"),
             "(",
             $.expression,
             ")"
         ),
         height_modifier: $ => seq(
-            "height",
+            token.immediate("height"),
             "(",
             $.expression,
             ")"
         ),
         
         layout_modifier: $ => seq(
-            "layout",
+            token.immediate("layout"),
             "(",
             $.alignment_type,
             ")"
         ),
         
-        padding_modifier: $ => seq(
-            "padding",
+        padding_modifier: $ => choice(
+            $.padding_modifier_full,
+            $.padding_modifier_default
+        ),
+        padding_modifier_full: $ => seq(
+            token.immediate("padding"),
             "(",
-            $.edge_type,
-            ",",
             $.expression,
+            ",",
+            $.edge_type,
             ")"
         ),
-        offset_modifier: $ => seq(
-            "offset",
+        padding_modifier_default: $ => seq(
+            token.immediate("padding"),
             "(",
-            $.axis_type,
-            ",",
             $.expression,
             ")"
         ),
         
-        margin_modifier: $ => seq(
-            "margin",
+        offset_modifier: $ => choice(
+            $.offset_modifier_full,
+            $.offset_modifier_default
+        ),
+        offset_modifier_full: $ => seq(
+            token.immediate("offset"),
             "(",
-            $.edge_type,
+            $.expression,
             ",",
+            $.axis_type,
+            ")"
+        ),
+        offset_modifier_default: $ => seq(
+            token.immediate("offset"),
+            "(",
+            $.expression,
+            ")"
+        ),
+        
+        margin_modifier: $ => choice(
+            $.margin_modifier_full,
+            $.margin_modifier_default
+        ),
+        margin_modifier_full: $ => seq(
+            token.immediate("margin"),
+            "(",
+            $.expression,
+            ",",
+            $.edge_type,
+            ")"
+        ),
+        margin_modifier_default: $ => seq(
+            token.immediate("margin"),
+            "(",
             $.expression,
             ")"
         ),
         
         enumerated_modifier: $ => seq(
-            "enumerated",
+            token.immediate("enumerated"),
             "(",
             $.bool_type,
             ")"
         ),
         caption_modifier: $ => seq(
-            "caption",
+            token.immediate("caption"),
             "(",
             $.text_content,
             ")"
         ),
         
         subfigure_modifier: $ => seq(
-            "subfigure",
+            token.immediate("subfigure"),
             "(",
             $.bool_type,
             ")"
         ),
         
         spacing_modifier: $ => seq(
-            "spacing",
+            token.immediate("spacing"),
             "(",
             $.expression,
             ")"
         ),
         
         tint_modifier: $ => seq(
-            "tint",
+            token.immediate("tint"),
             "(",
             $.color_type,
             ")"
         ),
         
         background_modifier: $ => seq(
-            "background",
+            token.immediate("background"),
             "(",
             $.color_type,
             ")"
         ),
         
         text_alignment_modifier: $ => seq(
-            "textAlignment",
+            token.immediate("textAlignment"),
             "(",
             $.horizontal_alignment_type,
             ")"
         ),
         line_spacing_modifier: $ => seq(
-            "lineSpacing",
+            token.immediate("lineSpacing"),
             "(",
             $.expression,
             ")"
         ),
         
         underline_modifier: $ => seq(
-            "underline",
+            $.underline_modifier_full,
+            $.underline_modifier_default
+        ),
+        underline_modifier_full: $ => seq(
+            token.immediate("underline"),
             "(",
             $.line_pattern_type,
             ",",
             $.color_type,
             ")"
         ),
+        underline_modifier_default: $ => seq(
+            token.immediate("underline"),
+            "(",
+            $.line_pattern_type,
+            ")"
+        ),
+      
         strikethrough_modifier: $ => seq(
-            "strikethrough",
+            $.strikethrough_modifier_full,
+            $.strikethrough_modifier_default
+        ),
+        strikethrough_modifier_full: $ => seq(
+            token.immediate("strikethrough"),
             "(",
             $.line_pattern_type,
             ",",
             $.color_type,
+            ")"
+        ),
+        strikethrough_modifier_default: $ => seq(
+            token.immediate("strikethrough"),
+            "(",
+            $.line_pattern_type,
             ")"
         ),
         
         font_size_modifier: $ => seq(
-            "fontSize",
+            token.immediate("fontSize"),
             "(",
             $.font_size_type,
             ")"
         ),
         font_style_modifier: $ => seq(
-            "fontStyle",
+            token.immediate("fontStyle"),
             "(",
             $.font_style_type,
             ")"
         ),
         
         code_language_modifier: $ => seq(
-            "language",
+            token.immediate("language"),
             "(",
             $.code_language_type,
             ")"
         ),
         code_style_modifier: $ => seq(
-            "style",
+            token.immediate("style"),
             "(",
             $.code_style_type,
             ")"
         ),
         code_frame_modifier: $ => seq(
-            "frame",
+            token.immediate("frame"),
             "(",
             $.code_frame_type,
             ")"
         ),
         code_numbers_modifier: $ => seq(
-            "numbers",
+            token.immediate("numbers"),
             "(",
             $.bool_type,
             ")"
@@ -536,18 +588,23 @@ module.exports = grammar({
         add_operation: $ => choice("+", "-"),
         mul_operation: $ => choice("*", "/"),
         
-        constant: $ => choice("@width", "@height"),
+        constant: $ => choice("@width", "@height", $.invalid_constant),
         number: $ => seq(
             $.number_type,
             optional($.measure_unit)
         ),
         measure_unit: $ => token.immediate(/pt|cm|mm|in/),
         
-        number_type: $ => choice($.integer, $.decimal),
-        bool_type: $ => choice("true", "false"),
+        number_type: $ => choice($.integer, $.decimal, $.invalid_number),
+        bool_type: $ => choice("true", "false", $.invalid_constant),
         
         integer: $ => /[1-9][0-9]*/,
-        decimal: $ => /[0-9]+\.[0-9]+/,
+        decimal: $ => /([1-9][0-9]*|0)\.[0-9]+/,
+        
+        invalid_constant: $ => /[a-zA-Z]+/,
+        invalid_number: $ => /[0]+[0-9]*(\.[0-9]+)?/,
+        
+        invalid_value: $ => token.immediate(/[a-zA-Z]+/),
         
         raw_text: $ => token(
             repeat1(
@@ -574,159 +631,310 @@ module.exports = grammar({
         file_name: $ => /[a-zA-Z0-9_\-]+/,
         
         horizontal_alignment_type: $ => seq(
-            optional("HorizontalAlignment"),
-            seq(".", $.horizontal_alignment_value)
+            ".",
+            $.horizontal_alignment_value
         ),
         horizontal_alignment_value: $ => choice(
-            "center",
-            "leading",
-            "trailing"
+            token.immediate("center"),
+            token.immediate("leading"),
+            token.immediate("trailing"),
+            $.invalid_value
         ),
         
         vertical_alignment_type: $ => seq(
-            optional("VerticalAlignment"),
-            seq(".", $.vertical_alignment_value)
+            ".",
+            $.vertical_alignment_value
         ),
         vertical_alignment_value: $ => choice(
-            "center",
-            "top",
-            "bottom"
+            token.immediate("center"),
+            token.immediate("top"),
+            token.immediate("bottom"),
+            $.invalid_value
         ),
         
         alignment_type: $ => seq(
-            optional("Alignment"),
-            seq(".", $.alignment_value)
+            ".",
+            $.alignment_value
         ),
         alignment_value: $ => choice(
-            "center",
-            "leading",
-            "trailing",
-            "top",
-            "bottom",
-            "topLeading",
-            "topTrailing",
-            "bottomLeading",
-            "bottomTrailing"
+            token.immediate("center"),
+            token.immediate("leading"),
+            token.immediate("trailing"),
+            token.immediate("top"),
+            token.immediate("bottom"),
+            token.immediate("topLeading"),
+            token.immediate("topTrailing"),
+            token.immediate("bottomLeading"),
+            token.immediate("bottomTrailing"),
+            $.invalid_value
         ),
         
         edge_type: $ => seq(
-            optional("Edge"),
-            seq(".", $.edge_value)
+            ".",
+            $.edge_value
         ),
         edge_value: $ => choice(
-            "top",
-            "bottom",
-            "leading",
-            "trailing",
-            "all"
+            token.immediate("top"),
+            token.immediate("bottom"),
+            token.immediate("leading"),
+            token.immediate("trailing"),
+            token.immediate("all"),
+            $.invalid_value
         ),
         
         axis_type: $ => seq(
-            optional("Axis"),
-            seq(".", $.axis_value)
+            ".",
+            $.axis_value
         ),
         axis_value: $ => choice(
-            "vertical",
-            "horizontal"
+            token.immediate("vertical"),
+            token.immediate("horizontal"),
+            $.invalid_value
         ),
         
         color_type: $ => seq(
-            optional("Color"),
-            seq(".", $.color_value)
+            ".",
+            $.color_value
         ),
         color_value: $ => choice(
-            "red", "green", "blue", "cyan", "magenta", "yellow",
-            "black", "gray", "white", "darkGray", "lightGray",
-            "brown", "lime", "olive", "orange", "pink", "purple",
-            "teal", "violet"
+            token.immediate("red"),
+            token.immediate("green"),
+            token.immediate("blue"),
+            token.immediate("cyan"),
+            token.immediate("magenta"),
+            token.immediate("yellow"),
+            token.immediate("black"),
+            token.immediate("gray"),
+            token.immediate("white"),
+            token.immediate("darkGray"),
+            token.immediate("lightGray"),
+            token.immediate("brown"),
+            token.immediate("lime"),
+            token.immediate("olive"),
+            token.immediate("orange"),
+            token.immediate("pink"),
+            token.immediate("purple"),
+            token.immediate("teal"),
+            token.immediate("violet"),
+            $.invalid_value
         ),
         
         line_pattern_type: $ => seq(
-            optional("LinePattern"),
-            seq(".", $.line_pattern_value)
+            ".",
+            $.line_pattern_value
         ),
         line_pattern_value: $ => choice(
-            "dash",
-            "dashDot",
-            "dashDotDot",
-            "dot",
-            "solid"
+            token.immediate("dash"),
+            token.immediate("dashDot"),
+            token.immediate("dashDotDot"),
+            token.immediate("dot"),
+            token.immediate("solid"),
+            $.invalid_value
         ),
         
         font_size_type: $ => seq(
-            optional("FontSize"),
-            seq(".", $.font_size_value)
+            ".",
+            $.font_size_value
         ),
         font_size_value: $ => choice(
-            "tiny",
-            "script",
-            "footnote",
-            "small",
-            "normal",
-            "large",
-            "larger",
-            "largest",
-            "huge",
-            "hugest"
+            token.immediate("tiny"),
+            token.immediate("script"),
+            token.immediate("footnote"),
+            token.immediate("small"),
+            token.immediate("normal"),
+            token.immediate("large"),
+            token.immediate("larger"),
+            token.immediate("largest"),
+            token.immediate("huge"),
+            token.immediate("hugest"),
+            $.invalid_value
         ),
         
         font_style_type: $ => seq(
-            optional("FontStyle"),
-            seq(".", $.font_style_value)
+            ".",
+            $.font_style_value
         ),
         font_style_value: $ => choice(
-            "medium",
-            "bold",
-            "italic",
-            "monospaced",
-            "smallCaps"
+            token.immediate("medium"),
+            token.immediate("bold"),
+            token.immediate("italic"),
+            token.immediate("monospaced"),
+            token.immediate("smallCaps"),
+            $.invalid_value
         ),
         
         code_language_type: $ => seq(
-            optional("CodeLanguage"),
-            seq(".", $.code_language_value)
+            ".",
+            $.code_language_value
         ),
         code_language_value: $ => choice(
-            "cucumber", "abap", "ada", "ahk", "antlr", "apacheconf",
-            "applescript", "as", "aspectj", "autoit", "asy", "awk",
-            "basemake", "bash", "bat", "bbcode", "befunge", "bmax", "boo",
-            "brainfuck", "bro", "bugs", "c", "ceylon", "cfm", "cfs", "cheetah",
-            "clj", "cmake", "cobol", "cl", "console", "control", "coq", "cpp",
-            "croc", "csharp", "css", "cuda", "cyx", "d", "dg", "diff", "django",
-            "dpatch", "duel", "dylan", "ec", "erb", "evoque", "fan", "fancy",
-            "fortran", "gas", "genshi", "glsl", "gnuplot", "go", "gosu",
-            "groovy", "gst", "haml", "haskell", "hxml", "html", "http", "hx",
-            "idl", "irc", "ini", "java", "jade", "js", "json", "jsp", "kconfig",
-            "koka", "lasso", "livescrit", "llvm", "logos", "lua", "mako",
-            "mason", "matlab", "minid", "monkey", "moon", "mxml", "myghty",
-            "mysql", "nasm", "newlisp", "newspeak", "numpy", "ocaml",
-            "octave", "ooc", "perl", "php", "plpgsql", "postgresql",
-            "postscript", "pot", "prolog", "psql", "puppet", "python",
-            "qml", "ragel", "raw", "ruby", "rhtml", "sass", "scheme",
-            "smalltalk", "sql", "ssp", "tcl", "tea", "tex", "text",
-            "vala", "vgl", "xml", "xquery", "yaml"
+            token.immediate("cucumber"),
+            token.immediate("abap"),
+            token.immediate("ada"),
+            token.immediate("ahk"),
+            token.immediate("antlr"),
+            token.immediate("apacheconf"),
+            token.immediate("applescript"),
+            token.immediate("as"),
+            token.immediate("aspectj"),
+            token.immediate("autoit"),
+            token.immediate("asy"),
+            token.immediate("awk"),
+            token.immediate("basemake"),
+            token.immediate("bash"),
+            token.immediate("bat"),
+            token.immediate("bbcode"),
+            token.immediate("befunge"),
+            token.immediate("bmax"),
+            token.immediate("boo"),
+            token.immediate("brainfuck"),
+            token.immediate("bro"),
+            token.immediate("bugs"),
+            token.immediate("c"),
+            token.immediate("ceylon"),
+            token.immediate("cfm"),
+            token.immediate("cfs"),
+            token.immediate("cheetah"),
+            token.immediate("clj"),
+            token.immediate("cmake"),
+            token.immediate("cobol"),
+            token.immediate("cl"),
+            token.immediate("console"),
+            token.immediate("control"),
+            token.immediate("coq"),
+            token.immediate("cpp"),
+            token.immediate("croc"),
+            token.immediate("csharp"),
+            token.immediate("css"),
+            token.immediate("cuda"),
+            token.immediate("cyx"),
+            token.immediate("d"),
+            token.immediate("dg"),
+            token.immediate("diff"),
+            token.immediate("django"),
+            token.immediate("dpatch"),
+            token.immediate("duel"),
+            token.immediate("dylan"),
+            token.immediate("ec"),
+            token.immediate("erb"),
+            token.immediate("evoque"),
+            token.immediate("fan"),
+            token.immediate("fancy"),
+            token.immediate("fortran"),
+            token.immediate("gas"),
+            token.immediate("genshi"),
+            token.immediate("glsl"),
+            token.immediate("gnuplot"),
+            token.immediate("go"),
+            token.immediate("gosu"),
+            token.immediate("groovy"),
+            token.immediate("gst"),
+            token.immediate("haml"),
+            token.immediate("haskell"),
+            token.immediate("hxml"),
+            token.immediate("html"),
+            token.immediate("http"),
+            token.immediate("hx"),
+            token.immediate("idl"),
+            token.immediate("irc"),
+            token.immediate("ini"),
+            token.immediate("java"),
+            token.immediate("jade"),
+            token.immediate("js"),
+            token.immediate("json"),
+            token.immediate("jsp"),
+            token.immediate("kconfig"),
+            token.immediate("koka"),
+            token.immediate("lasso"),
+            token.immediate("livescrit"),
+            token.immediate("llvm"),
+            token.immediate("logos"),
+            token.immediate("lua"),
+            token.immediate("mako"),
+            token.immediate("mason"),
+            token.immediate("matlab"),
+            token.immediate("minid"),
+            token.immediate("monkey"),
+            token.immediate("moon"),
+            token.immediate("mxml"),
+            token.immediate("myghty"),
+            token.immediate("mysql"),
+            token.immediate("nasm"),
+            token.immediate("newlisp"),
+            token.immediate("newspeak"),
+            token.immediate("numpy"),
+            token.immediate("ocaml"),
+            token.immediate("octave"),
+            token.immediate("ooc"),
+            token.immediate("perl"),
+            token.immediate("php"),
+            token.immediate("plpgsql"),
+            token.immediate("postgresql"),
+            token.immediate("postscript"),
+            token.immediate("pot"),
+            token.immediate("prolog"),
+            token.immediate("psql"),
+            token.immediate("puppet"),
+            token.immediate("python"),
+            token.immediate("qml"),
+            token.immediate("ragel"),
+            token.immediate("raw"),
+            token.immediate("ruby"),
+            token.immediate("rhtml"),
+            token.immediate("sass"),
+            token.immediate("scheme"),
+            token.immediate("smalltalk"),
+            token.immediate("sql"),
+            token.immediate("ssp"),
+            token.immediate("tcl"),
+            token.immediate("tea"),
+            token.immediate("tex"),
+            token.immediate("text"),
+            token.immediate("vala"),
+            token.immediate("vgl"),
+            token.immediate("xml"),
+            token.immediate("xquery"),
+            token.immediate("yaml"),
+            $.invalid_value
         ),
         
         code_style_type: $ => seq(
-            optional("CodeStyle"),
-            seq(".", $.code_style_value)
+            ".",
+            $.code_style_value
         ),
         code_style_value: $ => choice(
-            "manni", "fruity", "rrt", "autumn", "perldoc", "bw", "borland",
-            "emacs", "colorful", "vim", "murphy", "pastie", "vs", "friendly",
-            "trac", "native", "tango", "monokai"
+            token.immediate("manni"),
+            token.immediate("fruity"),
+            token.immediate("rrt"),
+            token.immediate("autumn"),
+            token.immediate("perldoc"),
+            token.immediate("bw"),
+            token.immediate("borland"),
+            token.immediate("emacs"),
+            token.immediate("colorful"),
+            token.immediate("vim"),
+            token.immediate("murphy"),
+            token.immediate("pastie"),
+            token.immediate("vs"),
+            token.immediate("friendly"),
+            token.immediate("trac"),
+            token.immediate("native"),
+            token.immediate("tango"),
+            token.immediate("monokai"),
+            $.invalid_value
         ),
         
         code_frame_type: $ => seq(
-            optional("CodeFrame"),
-            seq(".", $.code_frame_value)
+            ".",
+            $.code_frame_value
         ),
         code_frame_value: $ => choice(
-            "lefline",
-            "topline",
-            "bottomline",
-            "lines",
-            "single"
+            token.immediate("lefline"),
+            token.immediate("topline"),
+            token.immediate("bottomline"),
+            token.immediate("lines"),
+            token.immediate("single"),
+            $.invalid_value
         )
     }
 })
