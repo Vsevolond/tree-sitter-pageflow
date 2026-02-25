@@ -577,6 +577,7 @@ module.exports = grammar({
         invalid_constant: $ => /[a-zA-Z]+/,
         invalid_number: $ => /[0]+[0-9]*(\.[0-9]+)?/,
         
+        invalid_type: $ => /[a-zA-Z]+/,
         invalid_value: $ => token.immediate(/[a-zA-Z]+/),
         
         raw_text: $ => token(
@@ -603,9 +604,9 @@ module.exports = grammar({
         
         file_name: $ => /[a-zA-Z0-9_\-]+/,
         
-        horizontal_alignment_type: $ => seq(
-            ".",
-            $.horizontal_alignment_value
+        horizontal_alignment_type: $ => choice(
+            seq(".", $.horizontal_alignment_value),
+            $.invalid_type
         ),
         horizontal_alignment_value: $ => choice(
             token.immediate("center"),
@@ -614,9 +615,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        vertical_alignment_type: $ => seq(
-            ".",
-            $.vertical_alignment_value
+        vertical_alignment_type: $ => choice(
+            seq(".", $.vertical_alignment_value),
+            $.invalid_type
         ),
         vertical_alignment_value: $ => choice(
             token.immediate("center"),
@@ -625,9 +626,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        alignment_type: $ => seq(
-            ".",
-            $.alignment_value
+        alignment_type: $ => choice(
+            seq(".", $.alignment_value),
+            $.invalid_type
         ),
         alignment_value: $ => choice(
             token.immediate("center"),
@@ -642,9 +643,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        edge_type: $ => seq(
-            ".",
-            $.edge_value
+        edge_type: $ => choice(
+            seq(".", $.edge_value),
+            $.invalid_type
         ),
         edge_value: $ => choice(
             token.immediate("top"),
@@ -655,9 +656,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        axis_type: $ => seq(
-            ".",
-            $.axis_value
+        axis_type: $ => choice(
+            seq(".", $.axis_value),
+            $.invalid_type
         ),
         axis_value: $ => choice(
             token.immediate("vertical"),
@@ -665,9 +666,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        color_type: $ => seq(
-            ".",
-            $.color_value
+        color_type: $ => choice(
+            seq(".", $.color_value),
+            $.invalid_type
         ),
         color_value: $ => choice(
             token.immediate("red"),
@@ -692,9 +693,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        line_pattern_type: $ => seq(
-            ".",
-            $.line_pattern_value
+        line_pattern_type: $ => choice(
+            seq(".", $.line_pattern_value),
+            $.invalid_type
         ),
         line_pattern_value: $ => choice(
             token.immediate("dash"),
@@ -705,9 +706,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        font_size_type: $ => seq(
-            ".",
-            $.font_size_value
+        font_size_type: $ => choice(
+            seq(".", $.font_size_value),
+            $.invalid_type
         ),
         font_size_value: $ => choice(
             token.immediate("tiny"),
@@ -723,9 +724,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        font_style_type: $ => seq(
-            ".",
-            $.font_style_value
+        font_style_type: $ => choice(
+            seq(".", $.font_style_value),
+            $.invalid_type
         ),
         font_style_value: $ => choice(
             token.immediate("medium"),
@@ -736,9 +737,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        code_language_type: $ => seq(
-            ".",
-            $.code_language_value
+        code_language_type: $ => choice(
+            seq(".", $.code_language_value),
+            $.invalid_type
         ),
         code_language_value: $ => choice(
             token.immediate("cucumber"),
@@ -871,9 +872,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        code_style_type: $ => seq(
-            ".",
-            $.code_style_value
+        code_style_type: $ => choice(
+            seq(".", $.code_style_value),
+            $.invalid_type
         ),
         code_style_value: $ => choice(
             token.immediate("manni"),
@@ -897,9 +898,9 @@ module.exports = grammar({
             $.invalid_value
         ),
         
-        code_frame_type: $ => seq(
-            ".",
-            $.code_frame_value
+        code_frame_type: $ => choice(
+            seq(".", $.code_frame_value),
+            $.invalid_type
         ),
         code_frame_value: $ => choice(
             token.immediate("lefline"),
