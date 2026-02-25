@@ -555,7 +555,13 @@ module.exports = grammar({
         add_operation: $ => choice("+", "-"),
         mul_operation: $ => choice("*", "/"),
         
-        constant: $ => choice("@width", "@height", $.invalid_constant),
+        constant: $ => choice(
+            seq(
+                "@",
+                choice("width", "height", $.invalid_constant)
+            ),
+            $.invalid_constant
+        ),
         number: $ => seq(
             $.number_type,
             optional($.measure_unit)
@@ -568,7 +574,7 @@ module.exports = grammar({
         integer: $ => /[1-9][0-9]*/,
         decimal: $ => /([1-9][0-9]*|0)\.[0-9]+/,
         
-        invalid_constant: $ => /[a-zA-Z]+|@[a-zA-Z]*/,
+        invalid_constant: $ => /[a-zA-Z]+/,
         invalid_number: $ => /[0]+[0-9]*(\.[0-9]+)?/,
         
         invalid_value: $ => token.immediate(/[a-zA-Z]+/),

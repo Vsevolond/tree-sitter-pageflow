@@ -1965,12 +1965,30 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "STRING",
-          "value": "@width"
-        },
-        {
-          "type": "STRING",
-          "value": "@height"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "@"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "width"
+                },
+                {
+                  "type": "STRING",
+                  "value": "height"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "invalid_constant"
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "SYMBOL",
@@ -2050,7 +2068,7 @@
     },
     "invalid_constant": {
       "type": "PATTERN",
-      "value": "[a-zA-Z]+|@[a-zA-Z]*"
+      "value": "[a-zA-Z]+"
     },
     "invalid_number": {
       "type": "PATTERN",
