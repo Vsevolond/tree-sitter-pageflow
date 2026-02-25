@@ -150,7 +150,7 @@ module.exports = grammar({
         text_block: $ => seq(
             "Text",
             "{",
-            $.text_content,
+            repeat($.text_content),
             "}",
             repeat($.text_modifier)
         ),
@@ -171,7 +171,7 @@ module.exports = grammar({
         math_block: $ => seq(
             "Math",
             "{",
-            $.math_content,
+            repeat($.math_content),
             "}",
             repeat($.math_modifier)
         ),
@@ -602,7 +602,7 @@ module.exports = grammar({
         text_delimiter: $ => "\"",
         math_delimiter: $ => "$",
         
-        file_name: $ => /[a-zA-Z0-9_\-]+/,
+        file_name: $ => /[a-zA-Z0-9_\-]*/,
         
         horizontal_alignment_type: $ => choice(
             seq(".", $.horizontal_alignment_value),
