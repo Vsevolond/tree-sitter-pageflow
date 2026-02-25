@@ -1096,40 +1096,6 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "margin_modifier_default",
-          "named": true
-        },
-        {
-          "type": "margin_modifier_full",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "margin_modifier_default",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "margin_modifier_full",
-    "named": true,
-    "fields": {},
-    "children": {
       "multiple": true,
       "required": true,
       "types": [
@@ -1353,40 +1319,6 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "offset_modifier_default",
-          "named": true
-        },
-        {
-          "type": "offset_modifier_full",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "offset_modifier_default",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "offset_modifier_full",
-    "named": true,
-    "fields": {},
-    "children": {
       "multiple": true,
       "required": true,
       "types": [
@@ -1403,40 +1335,6 @@
   },
   {
     "type": "padding_modifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "padding_modifier_default",
-          "named": true
-        },
-        {
-          "type": "padding_modifier_full",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "padding_modifier_default",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "padding_modifier_full",
     "named": true,
     "fields": {},
     "children": {
@@ -1624,40 +1522,6 @@
   },
   {
     "type": "strikethrough_modifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "strikethrough_modifier_default",
-          "named": true
-        },
-        {
-          "type": "strikethrough_modifier_full",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "strikethrough_modifier_default",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "line_pattern_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "strikethrough_modifier_full",
     "named": true,
     "fields": {},
     "children": {
@@ -1940,40 +1804,6 @@
   },
   {
     "type": "underline_modifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "underline_modifier_default",
-          "named": true
-        },
-        {
-          "type": "underline_modifier_full",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "underline_modifier_default",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "line_pattern_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "underline_modifier_full",
     "named": true,
     "fields": {},
     "children": {

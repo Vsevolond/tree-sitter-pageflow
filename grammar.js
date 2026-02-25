@@ -336,7 +336,6 @@ module.exports = grammar({
             $.text_content,
             ")"
         ),
-        
         footer_modifier: $ => seq(
             token.immediate("footer"),
             "(",
@@ -364,60 +363,42 @@ module.exports = grammar({
             ")"
         ),
         
-        padding_modifier: $ => choice(
-            $.padding_modifier_full,
-            $.padding_modifier_default
-        ),
-        padding_modifier_full: $ => seq(
+        padding_modifier: $ => seq(
             token.immediate("padding"),
             "(",
             $.expression,
-            ",",
-            $.edge_type,
-            ")"
-        ),
-        padding_modifier_default: $ => seq(
-            token.immediate("padding"),
-            "(",
-            $.expression,
-            ")"
-        ),
-        
-        offset_modifier: $ => choice(
-            $.offset_modifier_full,
-            $.offset_modifier_default
-        ),
-        offset_modifier_full: $ => seq(
-            token.immediate("offset"),
-            "(",
-            $.expression,
-            ",",
-            $.axis_type,
-            ")"
-        ),
-        offset_modifier_default: $ => seq(
-            token.immediate("offset"),
-            "(",
-            $.expression,
+            optional(
+                seq(
+                  ",",
+                  $.edge_type
+                )
+            ),
             ")"
         ),
         
-        margin_modifier: $ => choice(
-            $.margin_modifier_full,
-            $.margin_modifier_default
-        ),
-        margin_modifier_full: $ => seq(
-            token.immediate("margin"),
+        offset_modifier: $ => seq(
+            token.immediate("offset"),
             "(",
             $.expression,
-            ",",
-            $.edge_type,
+            optional(
+                seq(
+                  ",",
+                  $.axis_type
+                )
+            ),
             ")"
         ),
-        margin_modifier_default: $ => seq(
+        
+        margin_modifier: $ => seq(
             token.immediate("margin"),
             "(",
             $.expression,
+            optional(
+                seq(
+                  ",",
+                  $.edge_type
+                )
+            ),
             ")"
         ),
         
@@ -454,7 +435,6 @@ module.exports = grammar({
             $.color_type,
             ")"
         ),
-        
         background_modifier: $ => seq(
             token.immediate("background"),
             "(",
@@ -476,40 +456,27 @@ module.exports = grammar({
         ),
         
         underline_modifier: $ => seq(
-            $.underline_modifier_full,
-            $.underline_modifier_default
-        ),
-        underline_modifier_full: $ => seq(
             token.immediate("underline"),
             "(",
             $.line_pattern_type,
-            ",",
-            $.color_type,
+            optional(
+                seq(
+                  ",",
+                  $.color_type
+                )
+            ),
             ")"
         ),
-        underline_modifier_default: $ => seq(
-            token.immediate("underline"),
-            "(",
-            $.line_pattern_type,
-            ")"
-        ),
-      
         strikethrough_modifier: $ => seq(
-            $.strikethrough_modifier_full,
-            $.strikethrough_modifier_default
-        ),
-        strikethrough_modifier_full: $ => seq(
             token.immediate("strikethrough"),
             "(",
             $.line_pattern_type,
-            ",",
-            $.color_type,
-            ")"
-        ),
-        strikethrough_modifier_default: $ => seq(
-            token.immediate("strikethrough"),
-            "(",
-            $.line_pattern_type,
+            optional(
+                seq(
+                  ",",
+                  $.color_type
+                )
+            ),
             ")"
         ),
         
@@ -601,7 +568,7 @@ module.exports = grammar({
         integer: $ => /[1-9][0-9]*/,
         decimal: $ => /([1-9][0-9]*|0)\.[0-9]+/,
         
-        invalid_constant: $ => /[a-zA-Z]+/,
+        invalid_constant: $ => /[a-zA-Z]+|@[a-zA-Z]*/,
         invalid_number: $ => /[0]+[0-9]*(\.[0-9]+)?/,
         
         invalid_value: $ => token.immediate(/[a-zA-Z]+/),
