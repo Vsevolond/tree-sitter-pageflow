@@ -205,41 +205,7 @@
       "required": true,
       "types": [
         {
-          "type": "code_language_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "code_language_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "code_language_value",
-          "named": true
-        },
-        {
-          "type": "invalid_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "code_language_value",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "invalid_value",
+          "type": "identifier",
           "named": true
         }
       ]
@@ -296,41 +262,7 @@
       "required": true,
       "types": [
         {
-          "type": "code_style_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "code_style_type",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "code_style_value",
-          "named": true
-        },
-        {
-          "type": "invalid_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "code_style_value",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "invalid_value",
+          "type": "identifier",
           "named": true
         }
       ]
@@ -2171,18 +2103,6 @@
     "named": false
   },
   {
-    "type": "abap",
-    "named": false
-  },
-  {
-    "type": "ada",
-    "named": false
-  },
-  {
-    "type": "ahk",
-    "named": false
-  },
-  {
     "type": "alignment",
     "named": false
   },
@@ -2191,63 +2111,7 @@
     "named": false
   },
   {
-    "type": "antlr",
-    "named": false
-  },
-  {
-    "type": "apacheconf",
-    "named": false
-  },
-  {
-    "type": "applescript",
-    "named": false
-  },
-  {
-    "type": "as",
-    "named": false
-  },
-  {
-    "type": "aspectj",
-    "named": false
-  },
-  {
-    "type": "asy",
-    "named": false
-  },
-  {
-    "type": "autoit",
-    "named": false
-  },
-  {
-    "type": "autumn",
-    "named": false
-  },
-  {
-    "type": "awk",
-    "named": false
-  },
-  {
     "type": "background",
-    "named": false
-  },
-  {
-    "type": "basemake",
-    "named": false
-  },
-  {
-    "type": "bash",
-    "named": false
-  },
-  {
-    "type": "bat",
-    "named": false
-  },
-  {
-    "type": "bbcode",
-    "named": false
-  },
-  {
-    "type": "befunge",
     "named": false
   },
   {
@@ -2259,19 +2123,7 @@
     "named": false
   },
   {
-    "type": "bmax",
-    "named": false
-  },
-  {
     "type": "bold",
-    "named": false
-  },
-  {
-    "type": "boo",
-    "named": false
-  },
-  {
-    "type": "borland",
     "named": false
   },
   {
@@ -2291,27 +2143,7 @@
     "named": false
   },
   {
-    "type": "brainfuck",
-    "named": false
-  },
-  {
-    "type": "bro",
-    "named": false
-  },
-  {
     "type": "brown",
-    "named": false
-  },
-  {
-    "type": "bugs",
-    "named": false
-  },
-  {
-    "type": "bw",
-    "named": false
-  },
-  {
-    "type": "c",
     "named": false
   },
   {
@@ -2323,87 +2155,7 @@
     "named": false
   },
   {
-    "type": "ceylon",
-    "named": false
-  },
-  {
-    "type": "cfm",
-    "named": false
-  },
-  {
-    "type": "cfs",
-    "named": false
-  },
-  {
-    "type": "cheetah",
-    "named": false
-  },
-  {
-    "type": "cl",
-    "named": false
-  },
-  {
-    "type": "clj",
-    "named": false
-  },
-  {
-    "type": "cmake",
-    "named": false
-  },
-  {
-    "type": "cobol",
-    "named": false
-  },
-  {
-    "type": "colorful",
-    "named": false
-  },
-  {
-    "type": "console",
-    "named": false
-  },
-  {
-    "type": "control",
-    "named": false
-  },
-  {
-    "type": "coq",
-    "named": false
-  },
-  {
-    "type": "cpp",
-    "named": false
-  },
-  {
-    "type": "croc",
-    "named": false
-  },
-  {
-    "type": "csharp",
-    "named": false
-  },
-  {
-    "type": "css",
-    "named": false
-  },
-  {
-    "type": "cucumber",
-    "named": false
-  },
-  {
-    "type": "cuda",
-    "named": false
-  },
-  {
     "type": "cyan",
-    "named": false
-  },
-  {
-    "type": "cyx",
-    "named": false
-  },
-  {
-    "type": "d",
     "named": false
   },
   {
@@ -2427,39 +2179,7 @@
     "named": true
   },
   {
-    "type": "dg",
-    "named": false
-  },
-  {
-    "type": "diff",
-    "named": false
-  },
-  {
-    "type": "django",
-    "named": false
-  },
-  {
     "type": "dot",
-    "named": false
-  },
-  {
-    "type": "dpatch",
-    "named": false
-  },
-  {
-    "type": "duel",
-    "named": false
-  },
-  {
-    "type": "dylan",
-    "named": false
-  },
-  {
-    "type": "ec",
-    "named": false
-  },
-  {
-    "type": "emacs",
     "named": false
   },
   {
@@ -2467,23 +2187,7 @@
     "named": false
   },
   {
-    "type": "erb",
-    "named": false
-  },
-  {
-    "type": "evoque",
-    "named": false
-  },
-  {
     "type": "false",
-    "named": false
-  },
-  {
-    "type": "fan",
-    "named": false
-  },
-  {
-    "type": "fancy",
     "named": false
   },
   {
@@ -2507,43 +2211,7 @@
     "named": false
   },
   {
-    "type": "fortran",
-    "named": false
-  },
-  {
     "type": "frame",
-    "named": false
-  },
-  {
-    "type": "friendly",
-    "named": false
-  },
-  {
-    "type": "fruity",
-    "named": false
-  },
-  {
-    "type": "gas",
-    "named": false
-  },
-  {
-    "type": "genshi",
-    "named": false
-  },
-  {
-    "type": "glsl",
-    "named": false
-  },
-  {
-    "type": "gnuplot",
-    "named": false
-  },
-  {
-    "type": "go",
-    "named": false
-  },
-  {
-    "type": "gosu",
     "named": false
   },
   {
@@ -2552,22 +2220,6 @@
   },
   {
     "type": "green",
-    "named": false
-  },
-  {
-    "type": "groovy",
-    "named": false
-  },
-  {
-    "type": "gst",
-    "named": false
-  },
-  {
-    "type": "haml",
-    "named": false
-  },
-  {
-    "type": "haskell",
     "named": false
   },
   {
@@ -2583,14 +2235,6 @@
     "named": false
   },
   {
-    "type": "html",
-    "named": false
-  },
-  {
-    "type": "http",
-    "named": false
-  },
-  {
     "type": "huge",
     "named": false
   },
@@ -2599,20 +2243,8 @@
     "named": false
   },
   {
-    "type": "hx",
-    "named": false
-  },
-  {
-    "type": "hxml",
-    "named": false
-  },
-  {
-    "type": "idl",
-    "named": false
-  },
-  {
-    "type": "ini",
-    "named": false
+    "type": "identifier",
+    "named": true
   },
   {
     "type": "integer",
@@ -2627,39 +2259,7 @@
     "named": true
   },
   {
-    "type": "irc",
-    "named": false
-  },
-  {
     "type": "italic",
-    "named": false
-  },
-  {
-    "type": "jade",
-    "named": false
-  },
-  {
-    "type": "java",
-    "named": false
-  },
-  {
-    "type": "js",
-    "named": false
-  },
-  {
-    "type": "json",
-    "named": false
-  },
-  {
-    "type": "jsp",
-    "named": false
-  },
-  {
-    "type": "kconfig",
-    "named": false
-  },
-  {
-    "type": "koka",
     "named": false
   },
   {
@@ -2676,10 +2276,6 @@
   },
   {
     "type": "largest",
-    "named": false
-  },
-  {
-    "type": "lasso",
     "named": false
   },
   {
@@ -2711,39 +2307,11 @@
     "named": false
   },
   {
-    "type": "livescrit",
-    "named": false
-  },
-  {
-    "type": "llvm",
-    "named": false
-  },
-  {
-    "type": "logos",
-    "named": false
-  },
-  {
-    "type": "lua",
-    "named": false
-  },
-  {
     "type": "magenta",
     "named": false
   },
   {
-    "type": "mako",
-    "named": false
-  },
-  {
-    "type": "manni",
-    "named": false
-  },
-  {
     "type": "margin",
-    "named": false
-  },
-  {
-    "type": "mason",
     "named": false
   },
   {
@@ -2755,10 +2323,6 @@
     "named": true
   },
   {
-    "type": "matlab",
-    "named": false
-  },
-  {
     "type": "measure_unit",
     "named": true
   },
@@ -2767,47 +2331,7 @@
     "named": false
   },
   {
-    "type": "minid",
-    "named": false
-  },
-  {
-    "type": "monkey",
-    "named": false
-  },
-  {
-    "type": "monokai",
-    "named": false
-  },
-  {
     "type": "monospaced",
-    "named": false
-  },
-  {
-    "type": "moon",
-    "named": false
-  },
-  {
-    "type": "murphy",
-    "named": false
-  },
-  {
-    "type": "mxml",
-    "named": false
-  },
-  {
-    "type": "myghty",
-    "named": false
-  },
-  {
-    "type": "mysql",
-    "named": false
-  },
-  {
-    "type": "nasm",
-    "named": false
-  },
-  {
-    "type": "native",
     "named": false
   },
   {
@@ -2815,31 +2339,11 @@
     "named": true
   },
   {
-    "type": "newlisp",
-    "named": false
-  },
-  {
-    "type": "newspeak",
-    "named": false
-  },
-  {
     "type": "normal",
     "named": false
   },
   {
     "type": "numbers",
-    "named": false
-  },
-  {
-    "type": "numpy",
-    "named": false
-  },
-  {
-    "type": "ocaml",
-    "named": false
-  },
-  {
-    "type": "octave",
     "named": false
   },
   {
@@ -2851,10 +2355,6 @@
     "named": false
   },
   {
-    "type": "ooc",
-    "named": false
-  },
-  {
     "type": "orange",
     "named": false
   },
@@ -2863,71 +2363,11 @@
     "named": false
   },
   {
-    "type": "pastie",
-    "named": false
-  },
-  {
-    "type": "perl",
-    "named": false
-  },
-  {
-    "type": "perldoc",
-    "named": false
-  },
-  {
-    "type": "php",
-    "named": false
-  },
-  {
     "type": "pink",
     "named": false
   },
   {
-    "type": "plpgsql",
-    "named": false
-  },
-  {
-    "type": "postgresql",
-    "named": false
-  },
-  {
-    "type": "postscript",
-    "named": false
-  },
-  {
-    "type": "pot",
-    "named": false
-  },
-  {
-    "type": "prolog",
-    "named": false
-  },
-  {
-    "type": "psql",
-    "named": false
-  },
-  {
-    "type": "puppet",
-    "named": false
-  },
-  {
     "type": "purple",
-    "named": false
-  },
-  {
-    "type": "python",
-    "named": false
-  },
-  {
-    "type": "qml",
-    "named": false
-  },
-  {
-    "type": "ragel",
-    "named": false
-  },
-  {
-    "type": "raw",
     "named": false
   },
   {
@@ -2936,26 +2376,6 @@
   },
   {
     "type": "red",
-    "named": false
-  },
-  {
-    "type": "rhtml",
-    "named": false
-  },
-  {
-    "type": "rrt",
-    "named": false
-  },
-  {
-    "type": "ruby",
-    "named": false
-  },
-  {
-    "type": "sass",
-    "named": false
-  },
-  {
-    "type": "scheme",
     "named": false
   },
   {
@@ -2975,23 +2395,11 @@
     "named": false
   },
   {
-    "type": "smalltalk",
-    "named": false
-  },
-  {
     "type": "solid",
     "named": false
   },
   {
     "type": "spacing",
-    "named": false
-  },
-  {
-    "type": "sql",
-    "named": false
-  },
-  {
-    "type": "ssp",
     "named": false
   },
   {
@@ -3007,27 +2415,7 @@
     "named": false
   },
   {
-    "type": "tango",
-    "named": false
-  },
-  {
-    "type": "tcl",
-    "named": false
-  },
-  {
-    "type": "tea",
-    "named": false
-  },
-  {
     "type": "teal",
-    "named": false
-  },
-  {
-    "type": "tex",
-    "named": false
-  },
-  {
-    "type": "text",
     "named": false
   },
   {
@@ -3063,10 +2451,6 @@
     "named": false
   },
   {
-    "type": "trac",
-    "named": false
-  },
-  {
     "type": "trailing",
     "named": false
   },
@@ -3079,27 +2463,11 @@
     "named": false
   },
   {
-    "type": "vala",
-    "named": false
-  },
-  {
     "type": "vertical",
     "named": false
   },
   {
-    "type": "vgl",
-    "named": false
-  },
-  {
-    "type": "vim",
-    "named": false
-  },
-  {
     "type": "violet",
-    "named": false
-  },
-  {
-    "type": "vs",
     "named": false
   },
   {
@@ -3108,18 +2476,6 @@
   },
   {
     "type": "width",
-    "named": false
-  },
-  {
-    "type": "xml",
-    "named": false
-  },
-  {
-    "type": "xquery",
-    "named": false
-  },
-  {
-    "type": "yaml",
     "named": false
   },
   {
